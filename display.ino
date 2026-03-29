@@ -97,12 +97,6 @@ void loop() {
       tagLost = true;
     }
   }
-
-  // Check timeout
-  if (millis() - lastResponseTime > timeoutLimit) {
-    showTagLost();
-    digitalWrite(BUZZER_PIN, HIGH);
-  }
 }
 
 void sendPing() {
